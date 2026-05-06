@@ -1,0 +1,206 @@
+.filter-sidebar {
+    width: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: width 0.3s ease;
+}
+
+.filter-sidebar--open {
+    width: 480px; /* или твоя ширина */
+}
+
+.filter-sidebar__inner {
+    width: 420px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #D9D9D9;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.filter-sidebar__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px 0;
+    gap: 20px;
+}
+
+.filter-sidebar__header h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--text-primary-black);
+}
+
+.filter-sidebar__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: var(--text-primary);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.filter-sidebar__type-buttons {
+    display: flex;
+    gap: 12px;
+    padding: 25px 30px 0;
+}
+
+.filter-sidebar__type-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5px 10px;
+    width: 123px;
+    height: 54px;
+    background: var(--text-primary);
+    border: 1px solid var(--bg-primary);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+
+
+}
+
+.filter-sidebar__type-btn--active {
+    background: var(--accent);
+}
+
+.filter-sidebar__type-info {
+    font-size: 12px;
+    font-family: var(--font-body);
+    font-weight: 300;
+
+
+}
+
+.filter-sidebar__genre-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 30px 0;
+}
+
+.filter-sidebar__genre-header h4 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: var(--text-primary-black);
+}
+
+.filter-sidebar__genre-header button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.filter-sidebar__genres {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px 30px 0;
+    padding: 14px;
+    background: var(--text-primary);
+    border-radius: 10px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.filter-sidebar__genre-row {
+    display: flex;
+    gap: 24px;
+}
+
+.filter-sidebar__genre-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 140px;
+    color: var(--text-primary-black);
+    cursor: pointer;
+}
+
+.filter-sidebar__genre-item input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #D9D9D9;
+    border: 1px solid var(--bg-primary);
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.filter-sidebar__genre-item input[type="checkbox"]:checked {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.filter-sidebar__genre-item input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.filter-sidebar__footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 18px;
+    background: var(--text-primary);
+}
+
+.filter-sidebar__reset-all {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-sidebar__reset-all span {
+    color: #EC221F;
+    font-size: 14px;
+}
+
+.filter-sidebar__reset-all:hover span {
+    color: var(--bg-red);
+    font-size: 14px;
+}
+
+.filter-sidebar__apply {
+    height: 56px;
+    padding: 0 32px;
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius-card);
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--text-primary-black);
+}

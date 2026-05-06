@@ -1,0 +1,14 @@
+**/node_modules
+**/.git
+**/bin
+**/obj
+**/packages
+**/.vs
+**/.vscode
+**/dist
+**/build
+**/*.md
+.gitignore
+.dockerignore
+docker-compose*
+*.log

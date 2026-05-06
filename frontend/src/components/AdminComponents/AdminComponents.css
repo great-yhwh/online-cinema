@@ -1,0 +1,484 @@
+/* ==================== Page Header ==================== */
+.adm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.adm-header__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.adm-header__title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 22px;
+    letter-spacing: -0.154px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.adm-header__subtitle {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--text-secondary);
+}
+
+.adm-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ==================== Stat Card ==================== */
+.adm-stat-card {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 18px;
+    width: 247px;
+    height: 116px;
+    background: var(--bg-card);
+    border: 1px solid var(--bg-card);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.adm-stat-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.adm-stat-card__label,
+.adm-stat-card__sublabel {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--text-primary);
+}
+
+.adm-stat-card__value {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 28px;
+    color: var(--text-primary);
+    border: 0.5px solid rgba(214, 221, 237, 0.12);
+}
+
+.adm-stat-card__icon {
+    width: 48px;
+    height: 48px;
+    background: #2F2C2C;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--text-secondary);
+}
+
+/* ==================== Input ==================== */
+.adm-input {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.adm-input__label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+}
+
+.adm-input__field {
+    box-sizing: border-box;
+    padding: 8px 12px;
+    background: var(--bg-card);
+    border: 0.5px solid var(--text-secondary);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+}
+
+.adm-input__field::placeholder {
+    color: var(--text-secondary);
+}
+
+.adm-input__field:focus {
+    border-color: var(--accent);
+}
+
+.adm-input__field--textarea {
+    resize: vertical;
+    min-height: 120px;
+    padding: 9px 12px;
+}
+
+/* ==================== Select ==================== */
+.adm-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
+
+.adm-select__field {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 40px 8px 12px;
+    background: var(--bg-card);
+    border: 0.5px solid var(--text-secondary);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--text-primary);
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.adm-select__field option {
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.adm-select__arrows {
+    position: absolute;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+/* ==================== Number Input ==================== */
+.adm-number {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background: var(--bg-card);
+    border: 0.5px solid var(--text-secondary);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.adm-number__field {
+    flex: 1;
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--text-primary);
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.adm-number__field::-webkit-outer-spin-button,
+.adm-number__field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.adm-number__arrows {
+    display: flex;
+    flex-direction: column;
+    padding-right: 6px;
+}
+
+.adm-number__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.adm-number__btn:hover svg {
+    stroke: var(--accent);
+}
+
+/* ==================== Button ==================== */
+.adm-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 13px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    white-space: nowrap;
+}
+
+.adm-btn:hover {
+    opacity: 0.9;
+}
+
+.adm-btn:active {
+    transform: scale(0.97);
+}
+
+.adm-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.adm-btn--primary {
+    background: var(--accent);
+    color: var(--text-primary-black);
+}
+
+.adm-btn--secondary {
+    background: rgba(126, 126, 127, 0.4);
+    border: 0.5px solid rgba(126, 126, 127, 0.4);
+    color: var(--text-primary);
+    border-radius: 10px;
+}
+
+.adm-btn--outline {
+    background: var(--text-primary-black);
+    border: 0.5px solid var(--text-secondary);
+    color: var(--text-primary);
+    border-radius: 30px;
+}
+
+/* ==================== Genre Tag ==================== */
+.adm-genre-tag {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 1px 10px;
+    background: var(--text-primary-black);
+    border: 0.5px solid var(--text-secondary);
+    border-radius: 30px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    font-variant: all-small-caps;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.adm-genre-tag--selectable {
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.adm-genre-tag--selectable:hover {
+    border-color: var(--accent);
+}
+
+.adm-genre-tag--selected {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--text-primary-black);
+}
+
+.adm-genre-tag__remove {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* ==================== Trash Button ==================== */
+.adm-trash-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.adm-trash-btn__bg {
+    width: 32px;
+    height: 32px;
+    background: rgba(126, 126, 127, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.adm-trash-btn:hover .adm-trash-btn__bg {
+    background: rgba(215, 101, 101, 0.5);
+}
+
+.adm-trash-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ==================== Edit Button ==================== */
+.adm-edit-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    background: rgba(126, 126, 127, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.adm-edit-btn:hover {
+    background: rgba(126, 126, 127, 0.6);
+}
+
+.adm-edit-btn span {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    font-variant: all-small-caps;
+    color: var(--text-primary);
+}
+
+/* ==================== Drop Zone ==================== */
+.adm-dropzone {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 47px 40px;
+    background: var(--bg-secondary);
+    border: 1px dashed var(--text-secondary);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.adm-dropzone:hover,
+.adm-dropzone--active {
+    border-color: var(--accent);
+    background: var(--text-primary-black);
+}
+
+.adm-dropzone__text {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.adm-dropzone__formats {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+/* ==================== Section Header ==================== */
+.adm-section-header {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.adm-section-header__icon {
+    width: 48px;
+    height: 48px;
+    background: #2F2C2C;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.adm-section-header__title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+/* ==================== Tabs ==================== */
+.adm-tabs {
+    display: flex;
+    gap: 20px;
+}
+
+.adm-tabs__tab {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 10px;
+    min-width: 120px;
+    height: 35px;
+    background: var(--text-primary-black);
+    border: 0.5px solid var(--text-secondary);
+    border-radius: 30px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.adm-tabs__tab:hover {
+    border-color: var(--accent);
+}
+
+.adm-tabs__tab--active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg-card);
+}

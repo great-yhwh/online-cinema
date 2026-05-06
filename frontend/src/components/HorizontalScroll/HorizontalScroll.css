@@ -1,0 +1,80 @@
+/* Базовые стили */
+.h-scroll-section {
+    padding: 40px 60px;
+}
+
+.h-scroll-section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.h-scroll-section__title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.h-scroll-section__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.h-scroll-section__link {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.h-scroll-section__link:hover {
+    transform: translateX(4px);
+}
+
+.h-scroll-section__controls {
+    display: flex;
+    gap: 8px;
+}
+
+.h-scroll-section__arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-primary);
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.h-scroll-section__arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.h-scroll-section__track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 16px;
+
+    /* Скрыть  скроллбар */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.h-scroll-section__track::-webkit-scrollbar {
+    display: none;
+}
+
+.h-scroll-section__track--top {
+    gap: 10px;
+}
+
+.h-scroll-section__empty {
+    color: var(--text-secondary);
+    font-size: 16px;
+}

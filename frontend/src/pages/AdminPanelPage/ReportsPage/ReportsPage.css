@@ -1,0 +1,39 @@
+/* ReportsPage.css */
+
+.reports {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.reports__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.reports__loading,
+.reports__error {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 40px;
+}
+
+/* Recharts overrides */
+.recharts-legend-item-text {
+    color: #94a3b8 !important;
+    font-family: var(--font-body) !important;
+    font-size: 12px !important;
+}
+
+.recharts-tooltip-wrapper {
+    outline: none;
+}
+
+@media (max-width: 1100px) {
+    .reports__grid {
+        grid-template-columns: 1fr;
+    }
+}

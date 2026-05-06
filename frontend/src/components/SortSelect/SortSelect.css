@@ -1,0 +1,90 @@
+/* Обёртка ------------------------------------------------------------------*/
+.sort-dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 40px;
+    width: 295px;
+    flex-shrink: 0;
+    height: 61px;
+    background: var(--bg-card);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sort-dropdown:hover {
+    background: var(--bg-hover);
+}
+
+/* Текстовый блок -----------------------------------------------------------*/
+.sort-dropdown__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sort-dropdown__label {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.154px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.sort-dropdown__value {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.154px;
+    color: var(--text-primary);
+}
+
+/* Иконка-стрелка -----------------------------------------------------------*/
+.sort-dropdown__icon {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.sort-dropdown__icon--open {
+    transform: rotate(180deg);
+}
+
+/* Выпадающее меню ----------------------------------------------------------*/
+.sort-dropdown__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 4px;
+    background: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 100;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sort-dropdown__option {
+    padding: 14px 25px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sort-dropdown__option:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.sort-dropdown__option--active {
+    color: var(--accent, #FFD700);
+}

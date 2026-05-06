@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500&family=Sofia+Sans+Extra+Condensed:wght@400;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ===== ЦВЕТА ===== */
+  --bg-primary: #000005;
+  --bg-secondary: #151111;
+  --bg-card: #222226;
+  --bg-hover: #2a2a2e;
+
+  --text-shadow-strong:
+          0 0 10px rgba(0, 0, 0, 0.8),
+          0 2px 4px rgba(0, 0, 0, 0.9);
+
+  --text-primary-black: #000005;
+  --text-primary: #FFFFFF;
+  --text-secondary: #7E7E7F;
+  --text-secondary-sec: #CACACA;
+  --text-muted: #66665D;
+
+  /* Акцентные цвета */
+  --accent: #FEC13D;
+  --accent-hover: #ffd060;
+  --accent-blue: #4A9EFF;
+
+  /* Статусные цвета */
+  --bg-red: #d76565;
+  --success: #53ac74;
+  --green: #53ac74;
+
+  /* Границы и тени */
+  --border: #7E7E7F;
+  --border-dark: #333;
+  --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  /* ===== РАДИУСЫ ===== */
+  --radius-sm: 10px;
+  --radius: 20px;
+  --radius-card: 30px;
+  --radius-pill: 60px;
+  --radius-circle: 100px;
+
+  /* ===== ШРИФТЫ ===== */
+  --font-heading: 'Sofia Sans Extra Condensed', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-sub: 'Roboto', sans-serif;
+
+  /* ===== ПЕРЕХОДЫ ===== */
+  --transition: all 0.3s ease;
+}
+
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ===== СКРОЛЛБАР ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 3px;
+}

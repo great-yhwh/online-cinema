@@ -1,0 +1,104 @@
+/* src/components/SubtitleForm/SubtitleForm.css */
+.subtitle-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subtitle-form__card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    padding: 17px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subtitle-form__row {
+    display: flex;
+    align-items: flex-end;
+    gap: 59px;
+    flex-wrap: wrap;
+}
+
+.subtitle-form__lang {
+    width: 213px;
+    flex-shrink: 0;
+}
+
+.subtitle-form__file {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.subtitle-form__file-label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.subtitle-form__file-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.subtitle-form__file-name {
+    font-size: 14px;
+    color: #fff;
+    background: rgba(126, 126, 127, 0.2);
+    padding: 4px 12px;
+    border-radius: 30px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.subtitle-form__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.subtitle-form__error {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--bg-red);
+}
+
+.subtitle-form__list-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subtitle-form__list-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 22px;
+    letter-spacing: -0.154px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.subtitle-form__list-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.subtitle-form__list {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}

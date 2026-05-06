@@ -1,0 +1,313 @@
+/* ===========================
+   ЭКРАН 1: HERO
+   =========================== */
+.home__hero {
+    height: 900px;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.home__hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 53px;
+    max-width: 770px;
+}
+
+.home__hero-title-block {
+    text-align: center;
+}
+
+.home__hero-title {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.home__hero-subtitle {
+    font-family: var(--font-sub);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: var(--text-secondary);
+}
+
+/* Genres */
+.home__genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+}
+
+.home__genre-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 37px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(2px);
+    border-radius: 60px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.154px;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.home__genre-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   SECTION HEADER (shared)
+   =========================== */
+.home__section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 50px;
+    margin-bottom: 14px;
+}
+
+.home__section-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 44px;
+    letter-spacing: -0.154px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.home__section-arrow {
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.home__section-arrow:hover svg { stroke: var(--text-primary); }
+
+/* ===========================
+   FAVORITES (authenticated)
+   =========================== */
+.home__favorites {
+    background: var(--bg-primary);
+    padding: 20px 0;
+}
+
+.home__favorites-scroll {
+    display: flex;
+    gap: 18px;
+    padding: 0 50px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.home__favorites-scroll::-webkit-scrollbar { display: none; }
+
+.home__favorites-empty {
+    color: var(--text-secondary);
+    font-size: 16px;
+    padding: 40px 0;
+}
+
+/* ===========================
+   TOP MOVIES (authenticated)
+   =========================== */
+.home__top {
+    background: var(--bg-primary);
+    padding: 20px 0 60px;
+    min-height: 560px;
+}
+
+.home__top-scroll {
+    display: flex;
+    gap: 1px;
+    padding: 0 50px;
+    padding-top: 32px;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.home__top-scroll::-webkit-scrollbar { display: none; }
+
+/* ===========================
+   КАК УЧИТЬ (not authenticated)
+   =========================== */
+.home__how {
+    background: var(--bg-primary);
+    padding: 51px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 600px;
+    justify-content: center;
+}
+
+.home__how-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 44px;
+    letter-spacing: -0.154px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.home__how-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    max-width: 733px;
+    width: 100%;
+}
+
+.home__how-row {
+    display: flex;
+    gap: 21px;
+}
+
+.home__how-card {
+    position: relative;
+    background: var(--text-secondary);
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    height: 200px;
+    padding: 19px 27px;
+    overflow: hidden;
+}
+
+.home__how-card--small { width: 312px; flex-shrink: 0; }
+.home__how-card--large { width: 400px; flex-shrink: 0; }
+
+.home__how-card-text {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.154px;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 2;
+    max-width: 200px;
+}
+
+.home__how-card--large .home__how-card-text { max-width: 300px; }
+
+.home__how-card-number {
+    position: absolute;
+    width: 100px;
+    height: 162px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: oblique;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 162px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.15);
+    z-index: 1;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.home__how-card--small:hover,
+.home__how-card--large:hover
+{
+    transform: translateY(-2px);
+}
+
+
+/* ===========================
+   MOVIES GRID (not authenticated)
+   =========================== */
+.home__movies {
+    background: var(--bg-primary);
+    padding: 34px 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__movies-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: -0.154px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    max-width: 1042px;
+}
+
+.home__movies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 344px);
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Loading */
+.home__loading {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.home__spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--border-dark);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 1200px) {
+    .home__hero-title { font-size: 52px; }
+    .home__movies-grid { grid-template-columns: repeat(2, 300px); }
+    .home__movies { padding: 40px 40px; }
+    .home__top-card { width: 350px; height: 440px; }
+    .home__top-number { font-size: 200px; }
+}
+
+@media (max-width: 768px) {
+    .home__hero-title { font-size: 36px; }
+    .home__search { width: 100%; }
+    .home__movies-grid { grid-template-columns: 1fr; }
+    .home__how-row { flex-direction: column; }
+    .home__how-card--small,
+    .home__how-card--large { width: 100%; }
+    .home__top-card { width: 300px; height: 400px; }
+    .home__top-number { font-size: 160px; }
+    .home__top-poster { width: 200px; height: 300px; }
+    .home__top-card-title,
+    .home__top-meta { width: 200px; }
+}

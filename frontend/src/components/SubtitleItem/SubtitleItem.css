@@ -1,0 +1,48 @@
+/* src/components/SubtitleItem/SubtitleItem.css */
+.subtitle-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 67px;
+    background: rgba(126, 126, 127, 0.4);
+    border-radius: 10px;
+    padding: 0 12px;
+    gap: 12px;
+}
+
+.subtitle-item__icon {
+    width: 48px;
+    height: 48px;
+    background: #2F2C2C;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.subtitle-item__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.subtitle-item__name {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.subtitle-item__meta {
+    display: flex;
+    gap: 20px;
+}
+
+.subtitle-item__meta span {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--text-secondary);
+}

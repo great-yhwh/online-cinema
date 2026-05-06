@@ -1,0 +1,40 @@
+/* src/components/WordCard/WordCard.css */
+.word-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 9px 16px;
+    width: 275px;
+    min-height: 150px;
+    background: var(--bg-card);
+    border-radius: 15px;
+}
+
+.word-card__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.word-card__en {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+    color: var(--text-primary);
+}
+
+.word-card__ru {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--accent);
+}
+
+.word-card__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

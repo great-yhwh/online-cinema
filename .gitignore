@@ -1,0 +1,45 @@
+# Окружение
+.env
+*.env
+!.env.example
+
+# Зависимости
+node_modules/
+.pnp/
+.pnp.js
+
+# Билды
+dist/
+build/
+.next/
+out/
+
+# Логи
+logs/
+*.log
+npm-debug.log*
+
+# Системное
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# БД и хранилище
+cinema-storage/
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker (опционально, если не хочешь пушить)
+# docker-compose.override.yml

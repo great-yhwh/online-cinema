@@ -1,0 +1,7 @@
+services:
+  api:
+    volumes:
+      - ./CinemaAPI:/src  
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    command: dotnet watch run --urls http://+:8080

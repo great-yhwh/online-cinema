@@ -1,0 +1,55 @@
+services:
+  api:
+    build:
+      context: ./CinemaAPI
+      target: development   
+    container_name: cinema_api
+    restart: unless-stopped
+    ports:
+      - "5050:8080"
+    volumes:
+      - ./CinemaAPI:/src
+      - ./cinema-storage:/src/cinema-storage
+      - /src/bin             
+      - /src/obj             
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=cinema_db;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}
+      - JwtSettings__Secret=YourSuperSecretKeyForJWT_MinLength32Characters!!
+      - JwtSettings__Issuer=CinemaAPI
+      - JwtSettings__Audience=CinemaClient
+      - JwtSettings__ExpirationInHours=24
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: cinema_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build: ./cinema-frontend
+    container_name: cinema_frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:

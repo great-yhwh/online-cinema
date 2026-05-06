@@ -1,0 +1,163 @@
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -60px;
+    background: var(--bg-primary);
+    border-radius: 16px;
+    padding: 20px;
+    min-width: 300px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    animation: dropIn 0.2s ease;
+    z-index: 1001;
+}
+
+@keyframes dropIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== ШАПКА ===== */
+.profile-dropdown__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--bg-card);
+    margin-bottom: 14px;
+}
+
+/* Жёлтый кружок-аватар */
+.profile-dropdown__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--text-primary-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.profile-dropdown__name {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+/* Кнопка выхода */
+.profile-dropdown__logout {
+    width: 40px;
+    height: 40px;
+    background: var(--border-dark);
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.profile-dropdown__logout:hover {
+    background: var(--bg-hover);
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+.profile-dropdown__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-dropdown__link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 6px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.profile-dropdown__link:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.profile-dropdown__link:hover span {
+    color: var(--text-primary);
+}
+
+.profile-dropdown__link:hover .profile-dropdown__icon-wrap {
+    background: var(--border-dark);
+}
+
+/* Кружок с иконкой */
+.profile-dropdown__icon-wrap {
+    width: 36px;
+    height: 36px;
+    background: var(--bg-card);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.profile-dropdown__link span {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: var(--border);
+    transition: color 0.2s ease;
+}
+
+/* ===== ВАРИАНТ ДЛЯ ФУТЕРА ===== */
+.profile-dropdown--footer {
+    position: static; /* Убираем абсолютное позиционирование */
+    width: 100%;
+    max-width: 300px; /* Можно ограничить ширину, если нужно */
+    background: transparent; /* Убираем фон */
+    box-shadow: none; /* Убираем тень */
+    border: none; /* Убираем границы */
+    padding: 0;
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+/* внутренние отступы для футера */
+.profile-dropdown--footer .profile-dropdown__header {
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+}
+
+.profile-dropdown--footer .profile-dropdown__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-dropdown--footer .profile-dropdown__link {
+    padding: 8px 0;
+    border-radius: 8px;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.profile-dropdown--footer .profile-dropdown__link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    padding-left: 1px;
+}

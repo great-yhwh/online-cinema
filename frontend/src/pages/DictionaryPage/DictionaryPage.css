@@ -1,0 +1,254 @@
+/* Основной контейнер страницы */
+.dictionary-page {
+    background: var(--text-primary-black);
+    min-height: 100vh;
+    padding-top: 170px;
+    padding-bottom: 80px;
+    width: 100%;
+}
+
+.dictionary-page__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+    position: relative;
+}
+
+/* Состояние загрузки */
+.dictionary-page--loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+.dictionary-page__spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--border-dark);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Заголовок "МОЙ СЛОВАРЬ" */
+.dictionary-page__header-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* отступ до линии */
+    margin-bottom: 40px;
+}
+
+.dictionary-page__title {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 1;
+    letter-spacing: -0.154px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.dictionary-page__divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border-dark);
+}
+
+/* Блок управления: кнопка игры + поиск */
+.dictionary-page__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Кнопка "НАЙДИ ПАРУ" */
+.dictionary-page__game-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 40px;
+    background: var(--bg-primary);
+    border: 0.5px solid var(--border);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.dictionary-page__game-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Поиск */
+.dictionary-page__search-wrap {
+    position: relative;
+    width: 300px;
+}
+
+.dictionary-page__search {
+    width: 100%;
+    height: 40px;
+    background: var(--bg-card);
+    border: none;
+    border-radius: 10px;
+    padding: 0 40px 0 15px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 16px;
+}
+
+.dictionary-page__search:focus {
+    outline: 1px solid var(--border);
+}
+
+.dictionary-page__search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Сетка слов */
+.dictionary-page__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+    gap: 40px 100px;
+}
+
+/* Карточка слова (одна строка в сетке) */
+.dictionary-page__item {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Кнопка удаления (круглая) */
+.dictionary-page__remove-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: var(--bg-card);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.dictionary-page__remove-btn:hover {
+    background: var(--bg-hover);
+}
+
+.dictionary-page__remove-btn:hover svg {
+    stroke: var(--bg-red);
+}
+
+/* Слово (Оригинал) */
+.dictionary-page__word-orig {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: -0.154px;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+/* Разделитель (Иконка минус) */
+.dictionary-page__separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 27px;
+    flex-shrink: 0;
+}
+
+/* Перевод */
+.dictionary-page__word-trans {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: -0.154px;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Пустой словарь */
+.dictionary-page__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    gap: 15px;
+}
+
+.dictionary-page__empty p {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.dictionary-page__empty span {
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .dictionary-page {
+        padding-top: 100px;
+    }
+
+    .dictionary-page__container {
+        padding: 0 20px;
+    }
+
+    .dictionary-page__title {
+        font-size: 32px;
+    }
+
+    .dictionary-page__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .dictionary-page__controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .dictionary-page__search-wrap {
+        width: 100%;
+    }
+}

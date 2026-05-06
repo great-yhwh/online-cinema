@@ -1,0 +1,373 @@
+/* ===== СТРАНИЦА ===== */
+.cw-page {
+    min-height: 100vh;
+    background: #0a0a0a;
+    padding-top: 118px; /* Под хедер */
+    padding-bottom: 52px;
+
+}
+
+.cw-page__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.cw-page__header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cw-page__title {
+    color: var(--text-primary);
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cw-page__count {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+/* ===== ЗАГРУЗКА ===== */
+.cw-page__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    color: var(--text-secondary);
+    gap: 16px;
+}
+
+.cw-page__spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: cwspin 0.8s linear infinite;
+}
+
+@keyframes cwspin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== ПУСТО ===== */
+.cw-page__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cw-page__empty-icon {
+    color: var(--border-dark);
+    margin-bottom: 24px;
+}
+
+.cw-page__empty-title {
+    color: var(--text-primary);
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.cw-page__empty-text {
+    color: var(--text-secondary);
+    font-size: 15px;
+    max-width: 400px;
+    line-height: 1.5;
+    margin: 0 0 28px;
+}
+
+.cw-page__empty-btn {
+    background: var(--accent);
+    color: var(--text-primary-black);
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.cw-page__empty-btn:hover {
+    background: var(--accent);
+    transform: translateY(-1px);
+}
+
+/* ===== СПИСОК ===== */
+.cw-page__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ===== КАРТОЧКА ===== */
+.cw-card {
+    display: flex;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cw-card:hover {
+    background: var(--bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(245, 197, 24, 0.15);
+}
+
+/* ===== ПОСТЕР ===== */
+.cw-card__poster {
+    position: relative;
+    width: 240px;
+    min-height: 135px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: var(--bg-hover);
+}
+
+.cw-card__poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cw-card__poster-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--border-dark);
+    background: linear-gradient(135deg, #1a1a1a, #222);
+}
+
+/* Play оверлей */
+.cw-card__play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.cw-card:hover .cw-card__play-overlay {
+    opacity: 1;
+}
+
+.cw-card__play-btn {
+    width: 52px;
+    height: 52px;
+    background: rgba(245, 197, 24, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary-black);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.cw-card:hover .cw-card__play-btn {
+    transform: scale(1.1);
+}
+
+/* Прогресс-бар НА постере */
+.cw-card__progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.15);
+}
+/* Заполнение прогрес-бара */
+.cw-card__progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 0 2px 2px 0;
+    transition: width 0.3s ease;
+    min-width: 2px;
+}
+
+/* ===== ИНФОРМАЦИЯ ===== */
+.cw-card__info {
+    flex: 1;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+.cw-card__info-top {
+    margin-bottom: 8px;
+}
+
+.cw-card__title {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cw-card__title-orig {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+    font-size: 18px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Мета */
+.cw-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.cw-card__year,
+.cw-card__duration,
+.cw-card__genres {
+    color: var(--text-primary);
+    font-size: 13px;
+}
+
+.cw-card__year {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.cw-card__genres {
+    color: var(--text-muted);
+}
+
+.cw-card__meta > span:not(:last-child)::after {
+    content: '·';
+    margin-left: 12px;
+    color: #444;
+}
+
+/* Прогресс инфо */
+.cw-card__progress-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.cw-card__time-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.cw-card__time-info svg {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.cw-card__remaining {
+    color: var(--text-secondary);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Нижняя строка */
+.cw-card__bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cw-card__watched-ago {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.cw-card__remove-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s, background 0.2s;
+    opacity: 0;
+}
+
+.cw-card:hover .cw-card__remove-btn {
+    opacity: 1;
+}
+
+.cw-card__remove-btn:hover {
+    color: var(--bg-red);
+    background: rgba(229, 9, 20, 0.1);
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 700px) {
+    .cw-page {
+        padding: 24px 0 60px;
+    }
+
+    .cw-page__header {
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 20px;
+    }
+
+    .cw-page__title {
+        font-size: 24px;
+    }
+
+    .cw-card {
+        flex-direction: column;
+    }
+
+    .cw-card__poster {
+        width: 100%;
+        height: 180px;
+    }
+
+    .cw-card__info {
+        padding: 14px 16px;
+    }
+
+    .cw-card__remove-btn {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,82 @@
+/* src/components/SearchInput/SearchInput.css */
+
+/* ===== Общее ===== */
+.search-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input__icon {
+    position: absolute;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+.search-input__field {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: var(--font-body);
+    background: transparent;
+    color: var(--text-primary);
+}
+
+/* ===== Admin variant ===== */
+.search-input--admin {
+    box-sizing: border-box;
+    width: 697px;
+    height: 55px;
+    background: var(--bg-card);
+    border: 2px solid var(--text-secondary);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    transition: border-color 0.2s;
+}
+
+.search-input--admin:focus-within {
+    border-color: var(--accent);
+}
+
+.search-input--admin .search-input__icon {
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-input--admin .search-input__field {
+    height: 100%;
+    padding: 0 20px 0 71px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.search-input--admin .search-input__field::placeholder {
+    color: var(--text-secondary);
+}
+
+/* ===== User variant ===== */
+.search-input--user {
+    width: 100%;
+}
+
+.search-input--user .search-input__icon {
+    right: 12px;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-input--user .search-input__field {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    background: rgba(126, 126, 127, 0.2);
+    border-radius: 30px;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.search-input--user .search-input__field::placeholder {
+    color: var(--text-secondary);
+}

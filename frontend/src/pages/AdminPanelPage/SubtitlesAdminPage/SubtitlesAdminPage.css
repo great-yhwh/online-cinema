@@ -1,0 +1,150 @@
+.subtitles-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form */
+.subtitles-admin__form-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    padding: 17px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.subtitles-admin__form-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 59px;
+    flex-wrap: wrap;
+}
+
+.subtitles-admin__content-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 38px;
+}
+
+.subtitles-admin__textarea-wrap {
+    flex: 1;
+}
+
+.subtitles-admin__textarea-wrap .adm-input {
+    width: 100%;
+}
+
+.subtitles-admin__add-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+    padding-bottom: 2px;
+}
+
+.subtitles-admin__error {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--bg-red);
+}
+
+/* Section */
+.subtitles-admin__section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subtitles-admin__section-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 22px;
+    letter-spacing: -0.154px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.subtitles-admin__list-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Pairs layout */
+.subtitles-admin__pairs {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.subtitles-admin__pair-row {
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+}
+
+/* Item */
+.subtitles-admin__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    max-width: 375px;
+    height: 67px;
+    background: rgba(126, 126, 127, 0.4);
+    border-radius: 10px;
+    padding: 0 12px;
+}
+
+.subtitles-admin__item-icon {
+    width: 48px;
+    height: 48px;
+    background: #2F2C2C;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.subtitles-admin__item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.subtitles-admin__item-name {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.subtitles-admin__item-meta {
+    display: flex;
+    gap: 16px;
+}
+
+.subtitles-admin__item-meta span {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.subtitles-admin__empty {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 30px;
+}
